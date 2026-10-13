@@ -1,0 +1,32 @@
+{
+  "pluginAlias": "DaikinLocal",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Local, cloud-free control of Daikin Smart AC - Brasil (iotalabs) units on TCP 15914. Get each unit's secret key once with extract_key.py.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "pollInterval": {
+        "title": "Poll interval (seconds)",
+        "type": "integer",
+        "default": 30,
+        "minimum": 5
+      },
+      "devices": {
+        "title": "Air conditioners",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "title": "Name", "type": "string", "default": "Daikin AC", "required": true },
+            "ip": { "title": "IP address", "type": "string", "format": "ipv4", "required": true, "description": "Give the adapter a static DHCP reservation." },
+            "key": { "title": "Secret key (base64)", "type": "string", "required": true, "x-schema-form": { "type": "password" } },
+            "minTemp": { "title": "Minimum setpoint (°C)", "type": "number", "default": 16 },
+            "maxTemp": { "title": "Maximum setpoint (°C)", "type": "number", "default": 30 },
+            "outdoorSensor": { "title": "Expose outdoor temperature sensor", "type": "boolean", "default": true }
+          }
+        }
+      }
+    }
+  }
+}

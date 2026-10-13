@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tgz
+.hb-test/
+.venv/
+__pycache__/
+.DS_Store

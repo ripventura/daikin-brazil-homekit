@@ -1,0 +1,7 @@
+#!/bin/sh
+# Wrapper: run the local control tool with the project venv.
+#   ./daikin --discover
+#   ./daikin --key <BASE64> --ip <AC_IP> get
+#   ./daikin --key <BASE64> --ip <AC_IP> set '{"power":1,"temperature":25,"mode":3}'
+here="$(cd "$(dirname "$0")" && pwd)"
+exec "$here/.venv/bin/python" "$here/daikin_local.py" "$@"
