@@ -1,7 +1,7 @@
 {
   "name": "homebridge-daikin-brazil-homekit",
   "displayName": "Daikin Brazil HomeKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local, cloud-free HomeKit control for Daikin Smart AC - Brasil (iotalabs) air conditioners via Homebridge.",
   "author": "Vitor Cesco",
   "license": "MIT",

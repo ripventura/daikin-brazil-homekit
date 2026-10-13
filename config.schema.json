@@ -20,7 +20,7 @@
           "properties": {
             "name": { "title": "Name", "type": "string", "default": "Daikin AC", "required": true },
             "ip": { "title": "IP address", "type": "string", "format": "ipv4", "required": true, "description": "Give the adapter a static DHCP reservation." },
-            "key": { "title": "Secret key (base64)", "type": "string", "required": true, "x-schema-form": { "type": "password" } },
+            "key": { "title": "Secret key (base64)", "type": "string", "required": true, "x-schema-form": { "type": "password" }, "description": "See the README for how to get your unit's secret key: https://github.com/ripventura/daikin-brazil-homekit#1-get-the-secret-key-one-time" },
             "minTemp": { "title": "Minimum setpoint (°C)", "type": "number", "default": 16 },
             "maxTemp": { "title": "Maximum setpoint (°C)", "type": "number", "default": 30 },
             "outdoorSensor": { "title": "Expose outdoor temperature sensor", "type": "boolean", "default": true }
